@@ -1,4 +1,12 @@
-<h2>Dettagli: {{ eroe1.name }}</h2>
+<h2>Dettagli: {{ eroe1.name | uppercase }}</h2>
+<!-- pipe per maiuscolo -->
 <div><span>id:</span>{{ eroe1.id }}</div>
 <div><span>name:</span>{{ eroe1.name }}</div>
 <!-- string interpolation -->
+
+<div>
+  <!-- collega etichetta a elemento -->
+  <label for="name">change name: </label>
+  <input id="name" [(ngModel)]="eroe1.name" placeholder="insert name" />
+  <!-- two-way binding -->
+</div>
